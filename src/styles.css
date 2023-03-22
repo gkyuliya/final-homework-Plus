@@ -1,0 +1,146 @@
+.container {
+  display: block;
+}
+
+.theme-button {
+  color: #8c96ad;
+  font-size: 10px;
+  font-weight: 100;
+
+  background: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 230px;
+  box-shadow: rgba(92, 90, 90, 0.02) 0px 1px 3px 0px,
+    rgba(67, 68, 69, 0.15) 0px 0px 0px 1px;
+  border: 1px solid #7a8ba692;
+  border-radius: 3px;
+  padding: 3px 5px;
+  transition: 150ms all ease-in-out;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.theme-button:hover {
+  cursor: pointer;
+  border: 1px solid #a3a4a5;
+  box-shadow: rgba(195, 192, 192, 0.248) 0px 1px 3px 0px,
+    rgba(122, 148, 175, 0.678) 0px 0px 0px 1px;
+  background: #baceee;
+  color: #393b3c;
+}
+
+.dark-theme {
+  background-color: rgb(111, 110, 108);
+}
+
+.dark-theme ul {
+  color: #2a2521;
+  font-weight: normal;
+}
+
+.dark-theme #temperature {
+  color: #2a2521;
+}
+
+.dark-theme h1 {
+  color: #312e2c;
+}
+
+.dark-theme .current-btn {
+  color: #ada97c;
+}
+
+.dark-theme .current-btn:hover {
+  color: rgb(111, 110, 108);
+  background: #ada97c;
+}
+
+.weather-form {
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #5a6275;
+  font-size: 30px;
+  line-height: 28px;
+  font-weight: 100;
+  white-space: nowrap;
+  text-align: center;
+}
+
+h2 {
+  color: #5a6275;
+}
+
+.day-time {
+  color: #5a6275;
+  font-size: 16px;
+  font-weight: 100;
+  height: 19px;
+  line-height: 1;
+  list-style-type: none;
+}
+
+.sun-image {
+  height: 90px;
+  width: 90px;
+  margin-left: 390px;
+}
+
+.units {
+  position: relative;
+  top: -34px;
+}
+
+ul {
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.parameters {
+  color: #5a6275;
+  font-size: 16px;
+  font-weight: 100;
+  height: 19px;
+  line-height: 1;
+  list-style-type: none;
+  margin-top: -10px;
+  margin-left: 10px;
+}
+
+.weather-app {
+  border: 1px solid rgb(116, 114, 114);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 700px;
+}
+
+.temp {
+  font-size: 74px;
+  color: rgb(33, 33, 33);
+  font-weight: 400;
+}
+
+.temperature {
+  margin-top: -30px;
+}
+
+.current-btn {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+small {
+  display: block;
+  text-align: center;
+}
+
+#search-input {
+  font-family: "Ubuntu", sans-serif;
+}
+
+#current-location {
+  font-family: "Ubuntu", sans-serif;
+}
