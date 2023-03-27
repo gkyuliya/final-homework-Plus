@@ -1,10 +1,9 @@
-function changeTheme() {
-  let weatherApp = document.querySelector(".weather-app");
-  weatherApp.classList.toggle("dark-theme");
-}
+//function changeTheme() {
+// let weatherApp = document.querySelector(".weather-app");
+// weatherApp.classList.toggle("dark-theme");}
 
-let themeButton = document.querySelector(".theme-button");
-themeButton.addEventListener("click", changeTheme);
+//let themeButton = document.querySelector(".theme-button");
+//themeButton.addEventListener("click", changeTheme);
 
 // feature 1
 let now = new Date();
