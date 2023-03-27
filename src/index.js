@@ -30,8 +30,8 @@ dayTime.innerHTML = `${day}<br>${time}:${min}`;
 // feature 2
 
 function searchCity(city) {
-  let apiKey = "1bee33f29fcced6b07349e2b6416baf2";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "5bd39438od4a5b74b16a2a5f3d6905t4";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(cityInput);
 }
 
@@ -68,16 +68,17 @@ celsius.addEventListener("click", convertToCelsius);
 // homework week 5
 
 function cityInput(response) {
-  document.querySelector("h1").innerHTML = response.data.name;
+  document.querySelector("h1").innerHTML = response.data.city;
 
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
 
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
 
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
 
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -85,8 +86,8 @@ function cityInput(response) {
 }
 
 function searchLocation(position) {
-  apiKey = "1bee33f29fcced6b07349e2b6416baf2";
-  apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+  apiKey = "5bd39438od4a5b74b16a2a5f3d6905t4";
+  apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(cityInput);
 }
 
