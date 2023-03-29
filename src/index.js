@@ -6,25 +6,44 @@
 //themeButton.addEventListener("click", changeTheme);
 
 // feature 1
-let now = new Date();
+function fixTime(timestamp) {
+  let now = new Date(timestamp);
+  let hours = now.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let min = now.getMinutes();
+  if (min < 10) {
+    min = `0${min}`;
+  }
 
-let dayTime = document.querySelector(".parameters");
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[now.getDay()];
+  return `${day}<br>${hours}:${min}`;
+}
 
-let days = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let day = days[now.getDay()];
-let time = now.getHours();
-let min = now.getMinutes();
-
-dayTime.innerHTML = `${day}<br>${time}:${min}`;
+function formatDay(timestamp) {
+  let now = new Date(timestamp * 1000);
+  let day = now.getDay();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return days[day];
+}
 
 // feature 2
 
@@ -82,6 +101,9 @@ function cityInput(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  let dayTime = document.querySelector(".day-time");
+  dayTime.innerHTML = fixTime(response.data.time * 1000);
 }
 
 function searchLocation(position) {
