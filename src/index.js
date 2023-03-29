@@ -6,7 +6,7 @@
 //themeButton.addEventListener("click", changeTheme);
 
 // feature 1
-function fixTime(timestamp) {
+function formatDate(timestamp) {
   let now = new Date(timestamp);
   let hours = now.getHours();
   if (hours < 10) {
@@ -28,21 +28,6 @@ function fixTime(timestamp) {
   ];
   let day = days[now.getDay()];
   return `${day}<br>${hours}:${min}`;
-}
-
-function formatDay(timestamp) {
-  let now = new Date(timestamp * 1000);
-  let day = now.getDay();
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-  return days[day];
 }
 
 // feature 2
@@ -103,7 +88,13 @@ function cityInput(response) {
   );
 
   let dayTime = document.querySelector(".day-time");
-  dayTime.innerHTML = fixTime(response.data.time * 1000);
+  dayTime.innerHTML = formatDate(response.data.time * 1000);
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
 }
 
 function searchLocation(position) {
