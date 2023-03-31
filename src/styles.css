@@ -2,6 +2,11 @@
   display: block;
 }
 
+.weather-app-wrapper {
+  max-width: 600px;
+  margin: 30px auto;
+}
+
 .theme-button {
   color: #8c96ad;
   font-size: 10px;
@@ -61,16 +66,20 @@
 
 h1 {
   color: #5a6275;
-  font-size: 2.5rem;
+  font-size: 45px;
   line-height: 28px;
   font-weight: 500;
   margin-top: 10px;
   white-space: nowrap;
-  text-align: center;
+  margin-left: -3px;
 }
 
 h1::first-letter {
   text-transform: capitalize;
+}
+
+.city-and-temperature {
+  margin-top: -30px;
 }
 
 h2 {
@@ -84,18 +93,21 @@ h2 {
   height: 19px;
   line-height: 1;
   list-style-type: none;
+  margin-top: 15px;
+  margin-left: -3px;
 }
 
 .sun-image {
-  height: 120px;
-  width: 120px;
-  margin-left: 380px;
-  display: block;
+  margin-top: -30px;
+  height: 140px;
+  width: 140px;
+  margin-left: -25px;
 }
 
 .units {
   position: relative;
   top: -34px;
+  margin-left: -3px;
 }
 
 ul {
@@ -121,19 +133,19 @@ li:first-letter {
 .weather-app {
   border: 1px solid rgb(116, 114, 114);
   border-radius: 10px;
-  padding: 15px;
-  margin: 20px auto;
-  max-width: 700px;
+  padding: 20px;
 }
 
 .temp {
   font-size: 74px;
-  color: rgb(33, 33, 33);
+  color: #312e2c;
   font-weight: 400;
 }
 
 .temperature {
   margin-top: -30px;
+  margin-left: 100px;
+  white-space: nowrap;
 }
 
 .current-btn {
@@ -145,6 +157,11 @@ li:first-letter {
 small {
   display: block;
   text-align: center;
+  margin-top: 20px;
+}
+
+small a {
+  color: rgb(215, 120, 210);
 }
 
 #search-input {
@@ -153,4 +170,13 @@ small {
 
 #current-location {
   font-family: "Ubuntu", sans-serif;
+}
+
+.weather-app .active {
+  color: #312e2c;
+  cursor: default;
+}
+
+.weather-app .active:hover {
+  text-decoration: none;
 }

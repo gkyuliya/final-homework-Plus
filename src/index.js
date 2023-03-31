@@ -48,34 +48,12 @@ function displayCityName(event) {
 let searchInput = document.querySelector(".weather-form");
 searchInput.addEventListener("submit", displayCityName);
 
-// bonus feature
-
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
-}
-
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", convertToFahrenheit);
-
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
-}
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", convertToCelsius);
-
-// homework week 5
-
 function cityInput(response) {
+  celsiusElement = response.data.temperature.current;
+
   document.querySelector("h1").innerHTML = response.data.city;
 
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.temperature.current
-  );
+  document.querySelector("#temperature").innerHTML = Math.round(celsiusElement);
 
   document.querySelector("#humidity").innerHTML =
     response.data.temperature.humidity;
@@ -108,7 +86,32 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function convertToFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (celsiusElement * 9) / 5 + 32;
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+}
+
+function convertToCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(celsiusElement);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentLocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", convertToFahrenheit);
+
+let celsiusElement = null;
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Barcelona");
