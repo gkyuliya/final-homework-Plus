@@ -49,7 +49,6 @@ let searchInput = document.querySelector(".weather-form");
 searchInput.addEventListener("submit", displayCityName);
 
 function cityInput(response) {
-  console.log(response);
   celsiusElement = response.data.temperature.current;
 
   document.querySelector("h1").innerHTML = response.data.city;
@@ -104,6 +103,33 @@ function convertToCelsius(event) {
   fahrenheitLink.classList.remove("active");
 }
 
+function forecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+              <div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
+                  width="40"
+                  alt=""
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-temperature-max"> 18° </span>
+                  <span class="weather-forecast-temperature-min"> 10° </span>
+                </div>
+                </div>
+            `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentLocation);
 
@@ -114,5 +140,7 @@ let celsiusElement = null;
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+forecast();
 
 searchCity("Barcelona");
