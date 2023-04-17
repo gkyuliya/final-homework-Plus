@@ -69,17 +69,12 @@ h1 {
   font-size: 45px;
   line-height: 28px;
   font-weight: 500;
-  margin-top: 10px;
   white-space: nowrap;
   margin-left: -3px;
 }
 
 h1::first-letter {
   text-transform: capitalize;
-}
-
-.city-and-temperature {
-  margin-top: -30px;
 }
 
 h2 {
@@ -90,7 +85,7 @@ h2 {
   margin-top: -20px;
   height: 140px;
   width: 140px;
-  margin-bottom: 10px;
+  margin-bottom: -10px;
   margin-left: 10px;
 }
 
@@ -109,6 +104,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+.day-time {
+  margin-bottom: 20px;
+}
+
 .day-time,
 .parameters {
   color: #5a6275;
@@ -118,7 +117,7 @@ li:first-letter {
   line-height: 1;
   list-style-type: none;
   margin-left: 4px;
-  margin-top: -18px;
+  margin-top: -20px;
 }
 
 .parameters {
@@ -127,8 +126,8 @@ li:first-letter {
 }
 
 .weather-app {
-  border: 1px solid rgb(116, 114, 114);
-  border-radius: 10px;
+  border: 3px solid #5a6275;
+  border-radius: 3px;
   padding: 20px;
 }
 
@@ -157,7 +156,11 @@ small {
 }
 
 small a {
-  color: rgb(230, 159, 226);
+  color: rgb(0, 0, 0);
+}
+
+small a:hover {
+  color: rgb(240, 175, 230);
 }
 
 #search-input {
@@ -179,4 +182,17 @@ small a {
 
 .weather-forecast {
   text-align: center;
+}
+
+#weather-forecast-col {
+  border: 2px solid #c8ccd3;
+  margin: 10px;
+}
+
+.weather-forecast-temperatures {
+  white-space: nowrap;
+}
+
+.weather-forecast-temperatures {
+  color: #c8ccd3;
 }
