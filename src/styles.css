@@ -3,7 +3,7 @@
 }
 
 .weather-app-wrapper {
-  max-width: 600px;
+  max-width: 750px;
   margin: 30px auto;
 }
 
@@ -126,20 +126,20 @@ li:first-letter {
 }
 
 .weather-app {
-  border: 3px solid #5a6275;
+  border: 3px solid #78849f;
   border-radius: 3px;
   padding: 20px;
 }
 
 .temp {
-  font-size: 74px;
-  color: #312e2c;
+  font-size: 80px;
+  color: #353230;
   font-weight: 400;
 }
 
 .temperature {
-  margin-top: -30px;
-  margin-left: 100px;
+  margin-top: -40px;
+  margin-left: 150px;
   white-space: nowrap;
 }
 
@@ -186,7 +186,13 @@ small a:hover {
 
 #weather-forecast-col {
   border: 2px solid #c8ccd3;
-  margin: 10px;
+  margin: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+#weather-forecast-col:hover {
+  opacity: 0.6;
 }
 
 .weather-forecast-temperatures {

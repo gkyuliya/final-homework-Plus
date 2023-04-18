@@ -49,9 +49,12 @@ let searchInput = document.querySelector(".weather-form");
 searchInput.addEventListener("submit", displayCityName);
 
 function cityInput(response) {
+  console.log(response);
   celsiusElement = response.data.temperature.current;
 
-  document.querySelector("h1").innerHTML = response.data.city;
+  document.querySelector(".h1-city").innerHTML = response.data.city;
+
+  document.querySelector(".h1-country").innerHTML = response.data.country;
 
   document.querySelector("#temperature").innerHTML = Math.round(celsiusElement);
 
