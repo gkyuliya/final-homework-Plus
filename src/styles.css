@@ -8,10 +8,10 @@
 }
 
 .gradient_bg {
-  background: linear-gradient(63deg, #787dcb, rgb(76, 79, 179) 72%);
-  background-size: 400% 400%;
-  -webkit-animation: gradient 25s ease infinite;
-  animation: gradient 25s ease infinite;
+  background: linear-gradient(63deg, #9397dc, #5062b4, rgb(81, 69, 209) 72%);
+  background-size: 300% 300%;
+  -webkit-animation: gradient 20s ease infinite;
+  animation: gradient 20s ease infinite;
 }
 
 @-webkit-keyframes gradient {
@@ -211,15 +211,17 @@ small {
   display: block;
   text-align: center;
   margin-top: 20px;
-  color: #6d80ad;
+  color: #513fc8;
+  font-family: "Ubuntu", sans-serif;
 }
 
 small a {
   color: #111a42;
+  font-family: "Ubuntu", sans-serif;
 }
 
 small a:hover {
-  color: #4e5897;
+  color: #5b4e97;
 }
 
 #search-input {
