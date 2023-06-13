@@ -247,3 +247,7 @@ small a:hover {
 .weather-forecast-temperatures {
   color: #c8ccd3;
 }
+
+#emoji {
+  text-align: center;
+}
