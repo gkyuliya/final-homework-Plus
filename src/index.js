@@ -91,22 +91,22 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-function convertToFahrenheit(event) {
-  event.preventDefault();
-  let fahrenheitTemperature = (celsiusElement * 9) / 5 + 32;
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
+//function convertToFahrenheit(event) {
+// event.preventDefault();
+//let fahrenheitTemperature = (celsiusElement * 9) / 5 + 32;
+//let temperatureElement = document.querySelector("#temperature");
+//temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+// celsiusLink.classList.remove("active");
+// fahrenheitLink.classList.add("active");
+//}
 
-function convertToCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusElement);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
+//function convertToCelsius(event) {
+// event.preventDefault();
+// let temperatureElement = document.querySelector("#temperature");
+// temperatureElement.innerHTML = Math.round(celsiusElement);
+// celsiusLink.classList.add("active");
+//  fahrenheitLink.classList.remove("active");
+//}
 
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
@@ -162,12 +162,12 @@ function getForecast(coordinates) {
 let locationButton = document.querySelector("#current-location");
 locationButton.addEventListener("click", getCurrentLocation);
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", convertToFahrenheit);
+//let fahrenheitLink = document.querySelector("#fahrenheit-link");
+//fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
-let celsiusElement = null;
+//let celsiusElement = null;
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", convertToCelsius);
+//let celsiusLink = document.querySelector("#celsius-link");
+//celsiusLink.addEventListener("click", convertToCelsius);
 
 searchCity("Barcelona");

@@ -120,18 +120,9 @@ h2 {
   margin-left: 10px;
 }
 
-.units {
-  position: relative;
-  top: -34px;
-  margin-left: -3px;
-}
-
-a.active {
-  color: #354072 !important;
-}
-
-a.active:hover {
-  color: #0f1633 !important;
+#celsius {
+  margin-top: -90px;
+  margin-left: 90px;
 }
 
 ul {
@@ -143,10 +134,6 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-.day-time {
-  margin-bottom: 20px;
-}
-
 .day-time,
 .parameters {
   color: #9ba7cb;
@@ -156,7 +143,7 @@ li:first-letter {
   line-height: 1;
   list-style-type: none;
   margin-left: 4px;
-  margin-top: -20px;
+  margin-top: 45px;
 }
 
 .parameters {
@@ -181,14 +168,6 @@ li:first-letter {
   margin-top: -40px;
   margin-left: 150px;
   white-space: nowrap;
-}
-
-#celsius-link {
-  color: #9ba7cb;
-}
-
-#fahrenheit-link {
-  color: #9ba7cb;
 }
 
 .current-btn {
